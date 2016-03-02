@@ -1,0 +1,839 @@
+// out: ../../public/css/styles.css
+@import "custom-bootstrap-variables.less";
+@import "variables.less";
+@import "filters.less";
+@import "mixins.less";
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
+body, html {
+    // display:table;
+    height:100%;
+    min-height: 700px;
+    width:100%;
+    min-width: 450px;
+    margin: 0;
+    background-color: @base-color-dark;
+    color: @base-color;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: lighten(@base-color, 10%);
+}
+
+/* HEADER
+-------------------------------------------------- */
+
+.header {
+  font-weight: bold;
+  height: 100%;
+  // background: url('../img/back1.jpg') no-repeat;
+  // background-size: cover;
+  // background-position: right;
+}
+
+.vertical {
+  position: relative;
+  // display: table;
+  // width: 100%;
+  top: @second-navbar-height;
+}
+
+.vertical .inner {
+  // display: table-cell;
+  // vertical-align: middle;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-wrapper .container {
+  height: 100%
+}
+
+.navbar-wrapper .container .navbar {
+  padding: 0px @navbar-padding-horizontal;
+  margin: 0;
+}
+
+.navbar-header, .navbar-header > img {
+  height: 100%;
+  text-align: center;
+}
+
+.navbar-brand {
+  display: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navbar-nav-group {
+  list-style: none;
+  display: inline-block;
+  float: right;
+  margin: 0 5px;
+}
+
+.navbar-nav-group > li {
+  float: left;
+}
+
+.nav {
+  height: 100%;
+}
+
+.navbar-nav-group-collapse {
+  display: none;
+}
+
+.second-navbar {
+  background-color: #FFF;
+  top: @my-navbar-height;
+  height: @second-navbar-height;
+  margin: 0;
+  z-index: -1;
+}
+
+.second-navbar-collapsed {
+  margin: 0;
+  border-bottom: 1px solid @base-color;
+  .box-shadow-inset(0px, -1px, 0px, 0px, .3);
+}
+
+.second-navbar-collapse {
+  height: 100%;
+  float: right;
+  display: none;
+}
+
+.second-navbar-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.second-navbar-nav {
+  height: auto;
+}
+
+.second-navbar-nav > li, .second-navbar-nav > li > a {
+  // height: 100%;
+  // line-height: 0px;
+}
+
+.navbar-default .second-navbar-nav .active > a, .second-navbar-nav .active > a:focus {
+  background-color: #FFF;
+  border: 2px solid @base-color-dark;
+}
+
+/* CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.inner .carousel {
+  height: @my-carousel-height;
+}
+
+.carousel-control.left, .carousel-control.right{
+  background: none;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  top: 35%;
+}
+
+.carousel-caption {
+  z-index: 10; /* Since positioning the image, we need to help out the caption */
+  top: 30px;
+  left: 10%;
+  // width: 450px;
+  text-align: left;
+  font-size: 12px;
+  // text-shadow: 1px 1px 10px @base-color-lighter;
+}
+
+.carousel-caption > h1 {
+  // padding: 10px;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  // letter-spacing: 5px;
+  text-shadow: 1px 1px 10px @base-color-lighter;
+}
+
+.carousel-caption > h1 .lead {
+  font-size: 25px;
+}
+
+.carousel-caption > h1:after {
+  background-color: @base-color-dark;
+  content: "";
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 230px;         width: 26vw;
+  margin: 10px 0px;
+  .box-shadow(0px, 0px, 1px, 0px, 1);
+}
+
+.carousel-caption > p {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  // text-align: justify;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: normal;
+  background-color: rgba(255,255,255,.75);
+  transition: background-color 0.5s; /* BYO prefixes */
+  text-shadow: 0px 0px 1px @base-color-light;
+}
+
+.carousel-caption > p:first-letter {
+  font-size: 20px;
+}
+
+.carousel-caption h1 > .lead {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.carousel-inner {
+  // overflow: visible;
+  height: 100%;
+}
+
+.color-lighter {
+  color: @base-color-lighter;
+  text-shadow: 0px 0px 1px @base-color-dark;
+}
+
+.color-lighter > p {
+  background-color: rgba(0,0,0,.75);
+}
+
+.color-lighter > h1 {
+  text-shadow: 1px 1px 10px @base-color-dark;
+}
+
+.color-lighter > h1:after {
+  background-color: @base-color-lighter;
+}
+
+/* Declare heights because of positioning of img element */
+.inner .carousel .item {
+  height: @my-carousel-height;
+  // background-color: #777;
+}
+
+.carousel-image {
+  position: relative;
+  top: @my-navbar-height;
+  left: 0;
+  width: 110%;
+  // height: @my-carousel-height;
+}
+
+.carousel-inner > .item .slide > img {
+  &:extend(.carousel-image);
+  // .box-shadow(0px, 0px, 100px, 50px, 0.8);
+}
+
+.carousel-inner > .item .slide-blur {
+  &:extend(.carousel-image);
+  // top: 330px;
+  // bottom: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  height: 100%;
+  .blur(5px);
+  .rotate();
+  .flipV();
+}
+
+.glyphicon:after {
+  position: absolute;
+  content: "";
+  padding: 14px 14px;
+  right:-10px;
+  top: -10px;
+  border: 2px solid;
+  border-color: @base-color-dark;
+  z-index: 1;
+  // .box-shadow-rgba(0px, 0px, 50px, 0px, rgba(255, 255, 255, 0.5));
+}
+
+.btn {
+  .box-shadow(0px, 0px, 1px, 0px, 0.5);
+  padding: 15px 25px;
+  transition: background-color 0.5s; /* BYO prefixes */
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+.marketing {
+  // position: relative;
+  // top: @second-navbar-height;
+  // position: absolute;
+  // top: 70%;
+  // top: @second-navbar-height;
+}
+
+.marketing .col-lg-3 {
+  top: 0;
+  margin-bottom: 10px;
+  // height:300px;
+}
+
+.builds-box {
+  background-color: @base-color-dark;
+  text-transform: uppercase;
+  color: white;
+  padding: 20px;
+  padding-left: 30px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.builds-box h4 {
+  font-size: 17px;
+  font-weight: normal;
+  // font-stretch: condensed;
+  color: inherit;
+}
+
+.builds-box h4 .lead {
+  font-size: 26px;
+  margin: inherit;
+}
+
+.builds-box h4:after {
+  .underline-responsive();
+}
+
+.text-box {
+  height: @text-box-height;
+  padding: 35px 30px;
+  background-color: white;
+  color: @base-color-light;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.text-box .active {
+  background-color: @base-color-highlight;
+}
+
+.text-box h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: @base-color;
+  // margin-top: 0;
+}
+.text-box h5:after {
+  .underline();
+}
+
+.text-box a {
+  text-decoration: underline;
+  // color: inherit;
+  // font-weight: 500;
+}
+
+.builds-box .carousel .carousel-control {
+  color: @base-color-highlight;
+  position: relative;
+  top: 30px;
+}
+
+.builds-box .carousel .carousel-control .glyphicon {
+  position: relative;
+}
+
+.builds-box .carousel .carousel-control .glyphicon:after {
+  border-color: @base-color-highlight;
+  padding: 20px;
+  top: -16px;
+  right: -16px;
+}
+
+.builds-box .carousel .carousel-control .glyphicon-chevron-left {
+  float: left;
+  margin: 0;
+}
+
+.builds-box .carousel .carousel-control .glyphicon-chevron-right {
+  float: right;
+  margin: 0;
+}
+
+.builds-box .carousel .carousel-inner .item {
+  background-color: transparent;
+}
+
+.player-box {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.player-box > h5 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+
+.player-avatar-img {
+  border: 5px solid black;
+  vertical-align: bottom;
+}
+
+.player-stats {
+  display: inline-block;
+  max-width: 140px;
+}
+
+.player-stats > div {
+  float: right;
+  color: @base-color;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.progress-box {
+  width: 6px;
+  height: 6px;
+  margin: 0 0.5px;
+  display: inline-block;
+  background-color: darken(@base-color, 10%);
+}
+
+.stat-numbers {
+  letter-spacing: 1px;
+  margin-left: 7px;
+  line-height: 20px;
+}
+
+.stat-name {
+  margin-right: 5px;
+}
+
+.stat-health {
+  background-color: #3EAE2C;
+}
+
+.stat-attack {
+  background-color: #E1251D;
+}
+
+.stat-magic {
+  background-color: #005DB9;
+}
+
+.stat-skill {
+  background-color: #73308A;
+}
+
+
+.top-plays-box {
+  background-color: @base-color-highlight;
+  color: @base-color-dark;
+}
+
+.top-plays-box h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.top-plays-box h4:after {
+  .underline-responsive(@background-color: @base-color-dark);
+}
+
+.top-plays-box h4 .lead {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.top-plays-box > a {
+    text-decoration: none;
+}
+
+.top-plays-carousel-controls {
+  position: relative;
+}
+
+.top-plays-box .carousel-control {
+  color: @base-color-dark;
+  position: relative;
+  top: 30px;
+}
+
+.top-plays-box .carousel-control .glyphicon {
+  position: relative;
+}
+
+.top-plays-box .carousel-control .glyphicon:after {
+  border-color: @base-color-dark;
+  padding: 20px;
+  top: -16px;
+  right: -16px;
+}
+
+.top-plays-box .carousel-control .glyphicon-chevron-left {
+  float: left;
+  margin: 0;
+}
+
+.top-plays-box .carousel-control .glyphicon-chevron-right {
+  float: right;
+  margin: 0;
+}
+
+.img-box {
+  padding: 0;
+  overflow: hidden;
+}
+
+.img-box > img {
+  height: 100%;
+}
+
+.header-date {
+  position: absolute;
+  width: 100%;
+  top: -25px;
+  left: 0;
+}
+
+.header-date .inner {
+  display: inline-block;
+  width: 40%;
+  background-color: black;
+  color: white;
+  padding: 8px;
+}
+
+.header-date .active {
+  background-color: @base-color-highlight;
+}
+
+.top-play-details-box > h5:after {
+  .underline-responsive();
+}
+
+.quote-box {
+  min-height: @text-box-height;
+  height: auto;
+  font-size: 14px;
+  line-height: 28px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 10px;
+  margin-top: @my-grid-gutter-width;
+}
+
+.quote-box-pseudo {
+  font-size: 50px;
+  position: absolute;
+  color: @base-color-lighter;
+}
+
+.quote-box:before {
+  &:extend(.quote-box-pseudo);
+  content: "“";
+  left: 5%;
+  top: 60px;
+}
+
+.quote-box:after {
+  &:extend(.quote-box-pseudo);
+  content: "”";
+  right: 5%;
+  bottom: 30px;
+}
+
+.quote-box > h5 {
+  text-transform: none;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.quote-box .author {
+  color: black;
+  font-size: 12px;
+}
+
+.quote-box .author:before {
+  .underline();
+}
+
+/* FOOTER
+-------------------------------------------------- */
+
+.col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0;
+}
+
+.footer {
+  position: relative;
+  background-color: @base-color-dark;
+  top: @over-carousel-top;
+}
+
+.footer-wrapper {
+  padding: 0px @my-grid-gutter-width;
+}
+
+.icon-offset-top {
+  position: relative;
+  top: -30px;
+}
+
+.icon {
+  background-color: inherit;
+  padding: 17px;
+  border-radius: 50px;
+  color: white;
+}
+
+.icon-box {
+  background-color: @base-color-highlight;
+  margin-bottom: 60px;
+}
+
+.col-lg-4 .active {
+  background-color: #91CE6B;
+  border-left: 1px solid darken(@base-color-highlight, 10%);
+  border-right: 1px solid darken(@base-color-highlight, 10%);
+}
+
+.icon-box h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.icon-box h2 .lead {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-box {
+  text-align: left;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+.footer-box h2 {
+  color: @base-color-lighter;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.footer-box h2:after {
+  .underline(@margin: 15px 0);
+}
+
+.footer-box-content:after {
+  .underline(darken(@base-color, 10%), 100%, 1px, 8.5px auto);
+}
+
+.footer-box-content:last-child:after {
+  display: none;
+}
+
+.footer-box-date {
+  color: @base-color-light;
+}
+
+.footer-box-author {
+  padding-left: 15px;
+  color: @base-color-highlight
+}
+
+.footer-box-author:before {
+  content: "By ";
+}
+
+.upcoming-event:before {
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: @base-color-highlight;
+  content: "\f017";
+  padding-right: 10px;
+}
+
+.footer-bottom {
+  margin: 70px 0;
+  font-size: 12px;
+}
+
+.footer-bottom:before {
+  .underline(darken(@base-color, 10%), 100%, 1px);
+}
+
+.footer-bottom p > a {
+  padding-left: 10px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: @screen-sm) {
+  h1, .h1 { font-size: @font-size-h1 * 1.2; }
+
+  /* Navbar positioning foo */
+  // @font-size-base: 10px;
+  .navbar-wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 20px;
+  }
+
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .navbar-brand {
+    display: inline-block;
+  }
+
+  .glyphicon:after {
+    right:-8px;
+    top: -8px;
+  }
+
+  .builds-box .carousel .carousel-control .glyphicon:after {
+    right:-14px;
+    top: -14px;
+  }
+
+  .inner .carousel {
+    height: @my-carousel-height * 1.5;
+    // margin-bottom: 60px;
+  }
+}
+
+@media (min-width: @screen-md) {
+  h1, .h1 { font-size: @font-size-h1 * 1.5; }
+
+  .navbar-nav-group {
+    display: none;
+    // display: inline-block;
+    margin: 0;
+  }
+
+  .second-navbar-collapsed {
+    display: none;
+  }
+
+  .second-navbar-collapse {
+    display: table;
+  }
+
+  .navbar-nav-group-collapse {
+    display: inline-block;
+  }
+
+  .navbar-header > img {
+    padding: 20px;
+  }
+
+  .inner .carousel {
+    height: @my-carousel-height * 2;
+    // margin-bottom: 60px;
+  }
+
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    top: 12%;
+  }
+}
+
+@media (min-width: @screen-lg) {
+  h1, .h1 { font-size: @font-size-h1 * 2; }
+
+  .navbar-header > img {
+    padding: 0px;
+  }
+
+  .inner .carousel {
+    height: @my-carousel-height * 2.5;
+  }
+
+  .carousel-caption {
+    left: 2%;
+  }
+
+  .carousel-caption > p {
+    background: none;
+    // text-shadow: 0px 0px 1px @base-color-lighter;
+  }
+
+  .btn {
+    background-color: transparent;
+  }
+
+  .marketing {
+    position: relative;
+    top: @over-carousel-top;
+    margin-bottom: @my-grid-gutter-width;
+  }
+
+  .builds-box {
+    text-align: left;
+    position: absolute;
+    top: -287px;
+    width: 97%;
+  }
+
+  .player-carousel-controls {
+    position: relative;
+    left: 45px;
+  }
+
+  .top-plays-box {
+    text-align: left;
+  }
+
+  .top-plays-carousel-controls {
+      left: -63px;
+  }
+
+  .top-play-details-box {
+    text-align: left;
+  }
+
+  .quote-box {
+    margin-top: 0;
+  }
+}

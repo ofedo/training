@@ -1,0 +1,49 @@
+html,body {
+    height:100%;
+}
+
+.slider-transition {
+  -webkit-transition: left 0.5s;
+  -moz-transition:  left 0.5s;
+  -ms-transition:  left 0.5s;
+  -o-transition:  left 0.5s;
+}
+
+.slider {
+  width: 400px; height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider > ul {
+  /* styled by JS to match the added width and height of all <li>’s */
+  position: relative;
+  left: 0;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.slider > ul > li {
+  float: left;
+  width: 400px; height: 300px;
+}
+
+.slider > ul > li > img {
+  height: 100%;
+}
+
+.slider > a {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 25%;
+  cursor:pointer;
+}
+
+.slider .left {
+  left: 0;
+}
+
+.slider .right {
+  right: 0;
+}

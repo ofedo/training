@@ -1,0 +1,31 @@
+.absolute(@top: auto, @bottom: auto, @left: auto, @right: auto) {
+  position: absolute;
+  top: @top;
+  bottom: @bottom;
+  left: @left;
+  right: @right;
+}
+
+.transition(@property: all, @duration: 0.15s) {
+  -webkit-transition: @property @duration; /* Safari */
+  transition: @property @duration;
+}
+
+.header-text(@color: white, @font-weight: bold, @font-style: italic, @text-transform: uppercase, @letter-spacing: 5px) {
+  color: @color;
+  font-weight: @font-weight;
+  font-style: @font-style;
+  text-transform: @text-transform;
+  letter-spacing: @letter-spacing;
+}
+
+.underline(@background-color: white, @width: 100px, @height: 2px, @margin: 15px auto) {
+  background-color: @background-color;
+  content: "";
+  display: block;
+  height: @height;
+  width: @width;
+  margin: @margin;
+  // .box-shadow(0px, 0px, 1px, 0px, 1);
+}
+

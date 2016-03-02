@@ -1,0 +1,129 @@
+/*
+ * Globals
+ */
+/*
+ * font smoothing
+ */
+html,
+html a {
+  -webkit-font-smoothing: antialiased !important;
+}
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #4f4f4f;
+  text-align: left;
+}
+h1 {
+  font-size: large;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 10px 20px 10px 20px;
+  white-space: nowrap;
+}
+h2 {
+  font-size: medium;
+  font-weight: bolder;
+  line-height: 20px;
+  color: #bc4452;
+  margin-bottom: 2px;
+}
+ul {
+  list-style: none;
+  padding: 0 20px;
+}
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #bc4452;
+  display: block;
+}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.container {
+  max-width: 400px;
+  padding: 0;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+/* Padding for spacing */
+.inner {
+  padding: 10px 30px;
+}
+.trending {
+  background-color: #F8F7F0;
+}
+.trending li {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dadad1;
+}
+.trend-next {
+  background-color: #DCDCD7;
+  color: #9a9a91;
+}
+.trend-next li {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #9a9a91;
+}
+.author {
+  color: #4f4f4f;
+  font-weight: bolder;
+  font-size: small;
+  display: inline-block;
+}
+.author::before {
+  content: "by";
+  font-style: italic;
+  font-weight: normal;
+  color: #9a9a91;
+}
+.author::after {
+  content: "–­­­­ " "5" " days ago";
+  font-weight: normal;
+  color: #9a9a91;
+}
+.size {
+  color: #4f4f4f;
+  display: inline-block;
+  float: right;
+}
+li:last-child {
+  border: none;
+}
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}

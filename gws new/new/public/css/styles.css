@@ -1,0 +1,541 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body,
+html {
+  height: 100%;
+  min-height: 700px;
+  width: 100%;
+  min-width: 450px;
+  margin: 0;
+  background-color: #252625;
+  color: #474947;
+  letter-spacing: 2px;
+}
+.header {
+  height: 100%;
+}
+.vertical {
+  position: relative;
+}
+.vertical .inner {
+  height: 100%;
+  margin: 0 auto;
+}
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+.navbar-wrapper .container {
+  height: 100%;
+}
+.navbar-wrapper .container .navbar {
+  padding: 0px 35px;
+  margin: 0;
+}
+.navbar-header,
+.navbar-header > img {
+  height: 100%;
+  text-align: center;
+}
+.navbar-brand,
+.navbar-brand:hover {
+  text-align: center;
+  white-space: nowrap;
+  background-color: black;
+}
+/* NAVBAR DIVIDER
+-------------------------------------------------- */
+.navbar .divider-vertical {
+  height: 20px;
+  margin: 20px 0px;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #ffffff;
+}
+.navbar-inverse .divider-vertical {
+  border-right-color: #222222;
+  border-left-color: #111111;
+}
+@media (max-width: 767px) {
+  .navbar-collapse .nav > .divider-vertical {
+    display: none;
+  }
+}
+/* SEARCH
+-------------------------------------------------- */
+.search-form {
+  padding: 0px 10px;
+}
+.search-control {
+  border: 0;
+  box-shadow: none;
+}
+/* BADGE
+-------------------------------------------------- */
+.my-badge {
+  line-height: inherit;
+  padding: 0px 10px;
+  margin: -1px 10px;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.inner .carousel {
+  height: 80%;
+}
+.carousel-control.left,
+.carousel-control.right {
+  background: none;
+}
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  top: 35%;
+}
+.carousel-caption {
+  z-index: 10;
+  /* Since positioning the image, we need to help out the caption */
+  top: 0;
+  left: 10%;
+  text-align: left;
+  font-size: 12px;
+}
+.carousel-caption > h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 10px #e3e3e3;
+}
+.carousel-caption > h1 .lead {
+  font-size: 25px;
+}
+.carousel-caption > h1:after {
+  background-color: #1c1c1c;
+  content: "";
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 230px;
+  width: 26vw;
+  margin: 10px 0px;
+  -webkit-box-shadow: 0px 0px 1px 0px #000000;
+  -moz-box-shadow: 0px 0px 1px 0px #000000;
+  box-shadow: 0px 0px 1px 0px #000000;
+}
+.carousel-caption > p {
+  padding: 10px;
+  width: 100%;
+  max-width: 450px;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color 0.5s;
+  /* BYO prefixes */
+  text-shadow: 0px 0px 1px #7d7d7d;
+}
+.carousel-caption > p:first-letter {
+  font-size: 20px;
+}
+.carousel-caption h1 > .lead {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.carousel-inner {
+  height: 100%;
+}
+/* Declare heights because of positioning of img element */
+.inner .carousel .item {
+  height: 80%;
+  background-color: #777;
+}
+.carousel-image,
+.carousel-inner > .item .slide > img,
+.carousel-inner > .item .slide-blur {
+  position: relative;
+  top: 60px;
+  left: 0;
+  min-width: 100%;
+  width: 100%;
+}
+.carousel-inner > .item .slide > img {
+  -webkit-box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.8);
+}
+.carousel-inner > .item .slide-blur {
+  height: 100%;
+  filter: blur(5px) contrast(90%);
+  -webkit-filter: blur(5px) contrast(90%);
+  -moz-filter: blur(5px) contrast(90%);
+  -o-filter: blur(5px) contrast(90%);
+  -ms-filter: blur(5px) contrast(90%);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+.glyphicon {
+  font-size: 12px;
+}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+.marketing .col-lg-3 {
+  top: 0;
+  margin-bottom: 10px;
+}
+.builds-box {
+  background-color: #1c1c1c;
+  text-transform: uppercase;
+  color: white;
+  padding: 20px;
+  padding-left: 30px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+.builds-box h4 {
+  font-size: 17px;
+  font-weight: normal;
+  color: inherit;
+}
+.builds-box h4 .lead {
+  font-size: 26px;
+  margin: inherit;
+}
+.small-underline {
+  height: 2px;
+  width: 100px;
+  display: inline-block;
+  position: relative;
+  background-color: #474947;
+}
+.background-color-dark {
+  background-color: #1c1c1c;
+}
+.builds-box .carousel .carousel-control {
+  color: #87bd65;
+  position: relative;
+  top: 30px;
+}
+.builds-box .carousel .carousel-control .glyphicon {
+  position: relative;
+}
+.builds-box .carousel .carousel-control .glyphicon:after {
+  border-color: #87bd65;
+  padding: 20px;
+  top: -16px;
+  right: -16px;
+}
+.builds-box .carousel .carousel-control .glyphicon-chevron-left {
+  float: left;
+  margin: 0;
+}
+.builds-box .carousel .carousel-control .glyphicon-chevron-right {
+  float: right;
+  margin: 0;
+}
+.builds-box .carousel .carousel-inner .item {
+  background-color: transparent;
+}
+.player-box {
+  font-size: 12px;
+  font-weight: bold;
+}
+.player-box > h5 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.player-avatar-img {
+  border: 5px solid black;
+  vertical-align: bottom;
+}
+.player-stats {
+  display: inline-block;
+  max-width: 140px;
+}
+.player-stats > div {
+  float: right;
+  color: #474947;
+  font-size: 8px;
+  font-weight: bold;
+}
+.progress-box {
+  width: 6px;
+  height: 6px;
+  margin: 0 0.5px;
+  display: inline-block;
+  background-color: #2e2f2e;
+}
+.stat-numbers {
+  letter-spacing: 1px;
+  margin-left: 7px;
+  line-height: 20px;
+}
+.stat-name {
+  margin-right: 5px;
+}
+.stat-health {
+  background-color: #3EAE2C;
+}
+.stat-attack {
+  background-color: #E1251D;
+}
+.stat-magic {
+  background-color: #005DB9;
+}
+.stat-skill {
+  background-color: #73308A;
+}
+.top-plays-box {
+  background-color: #87bd65;
+  color: #1c1c1c;
+  padding: 30px;
+  padding-left: 35px;
+  padding-bottom: 80px;
+  text-align: center;
+  height: 230px;
+}
+.top-plays-box h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.top-plays-box h4 .lead {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.top-plays-carousel-controls {
+  position: relative;
+  left: -60px;
+}
+.top-plays-box .carousel-control {
+  color: #1c1c1c;
+  position: relative;
+  top: 30px;
+}
+.top-plays-box .carousel-control .glyphicon {
+  position: relative;
+}
+.top-plays-box .carousel-control .glyphicon:after {
+  border-color: #1c1c1c;
+  padding: 20px;
+  top: -16px;
+  right: -16px;
+}
+.top-plays-box .carousel-control .glyphicon-chevron-left {
+  float: left;
+  margin: 0;
+}
+.top-plays-box .carousel-control .glyphicon-chevron-right {
+  float: right;
+  margin: 0;
+}
+.text-box {
+  background-color: white;
+  text-align: center;
+  color: #7d7d7d;
+  font-size: 12px;
+  padding: 20px;
+  padding-bottom: 50px;
+  height: 230px;
+}
+.text-box .active {
+  background-color: #87bd65;
+}
+.text-box h5 {
+  text-transform: uppercase;
+  color: #474947;
+  margin-top: 0;
+}
+.text-box a {
+  text-decoration: underline;
+  color: inherit;
+  font-weight: 500;
+}
+.header-date {
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  top: -45px;
+  background-color: #1c1c1c;
+  color: white;
+  padding: 8px;
+}
+/* Center align the text within the three columns below the carousel */
+.col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0;
+}
+.footer {
+  position: relative;
+  background-color: #1c1c1c;
+  top: 200px;
+}
+.footer-wrapper {
+  padding: 0px 15px;
+}
+.icon-offset-top {
+  position: relative;
+  top: -30px;
+}
+.icon {
+  background-color: inherit;
+  padding: 17px;
+  border-radius: 50px;
+  color: #e3e3e3;
+}
+.icon-box {
+  background-color: #87bd65;
+  margin-bottom: 60px;
+}
+.col-lg-4 .active {
+  background-color: #91CE6B;
+  border-left: 1px solid #6da748;
+  border-right: 1px solid #6da748;
+}
+.icon-box h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  margin-top: 0;
+}
+.icon-box h2 .lead {
+  color: #e3e3e3;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.footer-box {
+  text-align: left;
+}
+.footer-box h2 {
+  color: #e3e3e3;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.footer-box h2:after {
+  background-color: #474947;
+  content: "";
+  display: block;
+  position: relative;
+  height: 2px;
+  width: 100px;
+  margin: 15px 0px 20px 0px;
+}
+.footer-box-date {
+  color: #7d7d7d;
+}
+.footer-box-author {
+  padding-left: 15px;
+  color: #87bd65;
+}
+.footer-box-author:before {
+  content: "By ";
+}
+/* MY MIXINS
+-------------------------------------------------- */
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 36px;
+  }
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 20px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-brand {
+    display: inline-block;
+    color: white;
+  }
+  .glyphicon:after {
+    right: -8px;
+    top: -8px;
+  }
+  .builds-box .carousel .carousel-control .glyphicon:after {
+    right: -14px;
+    top: -14px;
+  }
+  .inner .carousel {
+    height: 120%;
+  }
+}
+@media (min-width: 992px) {
+  h1,
+  .h1 {
+    font-size: 45px;
+  }
+  .navbar-nav-group {
+    display: none;
+    margin: 0;
+  }
+  .navbar-nav-group-collapse {
+    display: inline-block;
+  }
+  .navbar-header > img {
+    padding: 10px;
+  }
+  .inner .carousel {
+    height: 160%;
+  }
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    top: 12%;
+  }
+}
+@media (min-width: 1200px) {
+  h1,
+  .h1 {
+    font-size: 60px;
+  }
+  .inner .carousel {
+    height: 240%;
+  }
+  .carousel-caption {
+    left: 2%;
+  }
+  .carousel-caption > p {
+    background: none;
+  }
+  .btn {
+    background-color: transparent;
+  }
+  .marketing {
+    position: relative;
+    top: 200px;
+  }
+  .builds-box {
+    text-align: left;
+    position: absolute;
+    top: -285px;
+    width: 95%;
+  }
+  .player-carousel-controls {
+    position: relative;
+    left: 45px;
+  }
+  .top-plays-box {
+    text-align: left;
+  }
+  .top-play-details-box {
+    text-align: left;
+  }
+}

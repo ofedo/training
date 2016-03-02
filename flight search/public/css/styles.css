@@ -1,0 +1,148 @@
+/*
+ * Globals
+ */
+/*
+ * font smoothing
+ */
+html,
+html a {
+  -webkit-font-smoothing: antialiased !important;
+}
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #4d1b20;
+  background-image: url("../../public/img/backgr.png");
+  background-size: cover;
+  color: #4f4f4f;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: medium;
+}
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+}
+/* Padding for spacing */
+.inner {
+  background-color: #F8F7F0;
+  padding: 3% 10%;
+}
+.logo {
+  font-size: 50px;
+  font-size: 6vw;
+  margin-bottom: 40px;
+}
+.logo > p {
+  font-size: 38px;
+  font-size: 4.5vw;
+}
+.logo > i {
+  padding-bottom: 20px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.form-horizontal .form-group {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.my-control-label {
+  display: inline-block;
+  font-weight: lighter;
+}
+.my-form-control,
+.my-form-control:focus {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #b5b5b5;
+  outline: none;
+  outline-style: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #4f4f4f;
+  width: 40px;
+}
+.input-resp {
+  width: 50%;
+}
+.select {
+  background: transparent;
+  text-transform: uppercase;
+  color: #bc4452;
+  background-color: #FFF;
+  padding: 5px;
+}
+.section {
+  margin-bottom: 30px;
+}
+.date,
+.date:focus {
+  width: 50%;
+}
+::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+}
+::-webkit-calendar-picker-indicator::after {
+  content: '';
+  display: block;
+  background: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-128.png) no-repeat;
+  background-size: 15%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.btn,
+.btn:hover {
+  background-color: #bc4452;
+  color: #ffffff;
+  border-radius: 0;
+}
+.btn:hover {
+  background-color: #c96a75;
+}
+.btn:active {
+  background-color: #973641;
+}
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 470px;
+  }
+  .input-resp {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .cover-container {
+    width: 800px;
+  }
+  .input-resp {
+    width: 75%;
+  }
+}

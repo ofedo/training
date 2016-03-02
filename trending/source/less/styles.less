@@ -1,0 +1,157 @@
+// out: ../../public/css/styles.css
+@import "variables.less";
+
+/*
+ * Globals
+ */
+
+/*
+ * font smoothing
+ */
+html, html a {
+    -webkit-font-smoothing: antialiased !important;
+}
+
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: @color-dark-gray;
+  text-align: left;
+  // text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+h1 {
+  font-size: large;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 10px @padding-lr 10px @padding-lr;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: medium;
+  // letter-spacing: 4px;
+  // text-transform: uppercase;
+  font-weight: bolder;
+  line-height: 20px;
+  color: @color-dark-red;
+  margin-bottom: 2px;
+  // padding: 10px 20px 20px 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0 @padding-lr;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: @color-dark-red;
+  display: block;
+  // background-color: #fff;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  // -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          // box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.container {
+  max-width: 400px;
+  padding: 0;
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,.5);
+          box-shadow: 0 0 50px rgba(0,0,0,.5);
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 10px 30px;
+}
+
+.trending {
+  background-color: #F8F7F0;
+}
+
+.trending li {
+  padding-bottom: 15px;
+  border-bottom: 1px solid @color-light-gray;
+}
+
+.trend-next {
+  background-color: #DCDCD7;
+  color: @color-gray;
+}
+
+.trend-next li {
+  padding-bottom: 15px;
+  border-bottom: 1px solid @color-gray;
+}
+
+.author {
+  color: @color-dark-gray;
+  font-weight: bolder;
+  font-size: small;
+  display: inline-block;
+}
+
+.author::before {
+  content: "by";
+  font-style: italic;
+  font-weight: normal;
+  color: @color-gray;
+}
+
+.author::after {
+  content: "–­­­­ " @num-days " days ago";
+  font-weight: normal;
+  color: @color-gray;
+}
+
+.size {
+  color: @color-dark-gray;
+  display: inline-block;
+  float: right;
+}
+
+li:last-child {
+  border: none;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}

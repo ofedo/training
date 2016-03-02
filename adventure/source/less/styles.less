@@ -1,0 +1,460 @@
+// out: ../../public/css/styles.css
+@import "variables.less";
+@import "mixins.less";
+@import "grid.less";
+@import "filters.less";
+
+* {
+  box-sizing: border-box;
+}
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0px;
+}
+
+.header div {
+  .header-text(@font-style: normal);
+}
+
+.header li a, .anchor {
+  .header-text();
+  margin: 20px;
+  text-decoration: none;
+  .transition();
+}
+
+.header h2 {
+  margin: 0 0 5px 0;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.header h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+.vertical {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical .inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.header {
+  height: 100%;
+  background: url('../../public/img/header/desert01.jpg') no-repeat;
+  background-size: cover;
+}
+
+.navigation-bar {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 100px;
+  //  .gradient(0deg, transparent, rgba(150,150,150,0.6));
+}
+
+.menu-icon {
+  width: 2em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+.menu-icon:hover > div {
+  border-color: @color-hover;
+}
+
+.menu-icon > div {
+  width: 100%;
+  margin-bottom: 3px;
+  border-top: 0.35em solid #FFF;
+  .transition();
+}
+
+.absolute-top-left {
+  .absolute(@header-absolute-vertical, auto, @header-absolute-horizontal, auto);
+}
+
+.absolute-top-right {
+  .absolute(@header-absolute-vertical, auto, auto, @header-absolute-horizontal);
+}
+
+.absolute-bottom-left {
+  .absolute(auto, @header-absolute-vertical, @header-absolute-horizontal, auto);
+}
+
+.button {
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 0.8em 3em;
+}
+
+.button-white {
+  .button;
+  background-color: white;
+  color: black;
+  margin: 0;
+  font-style: italic;
+  font-weight: bold;
+  .transition();
+}
+
+.button-white:hover {
+  background-color: @color-hover;
+  color: white;
+}
+
+.button-blue {
+  .button;
+  background-color: steelblue;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  .transition();
+}
+
+.button-blue:hover {
+  background-color: @color-hover;
+  color: white;
+}
+
+.button-black {
+  .button-white;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
+
+.button-black:hover{
+  background-color: @color-hover;
+}
+
+.button-gray {
+  .button-white;
+  background-color: darken(darkgray, 45%);
+  color: white;
+  font-weight: 500;
+  margin-top: 20px;
+  position: relative;
+  top: 20px;
+}
+
+.button-gray:hover{
+  background-color: @color-hover;
+}
+
+.navigation {
+  padding: 0 160px;
+}
+
+.navigation > li {
+  display: inline-block;
+  margin: @header-absolute-vertical /2 0;
+}
+
+.navigation > li a:hover {
+  color: @color-hover;
+}
+
+.navigation > li img {
+  vertical-align: middle;
+  width: 70%;
+}
+
+.hero-unit {
+  text-align: center;
+  color: white;
+}
+
+.hero-unit .title {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 70px;
+  text-transform: none;
+}
+
+.hero-unit .sub-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.all-trips {
+  text-decoration: underline;
+  margin: 0 0 0 10px;
+}
+
+.proof {
+//  margin-top: 70px;
+//  margin-bottom: 70px;
+  height: 30%;
+  text-align: center;
+}
+
+.proof .inner .title {
+  font-size: 30px;
+  margin: 5px;
+}
+
+.proof .inner .sub-title {
+  font-size: 15px;
+  margin: 0 0 30px 0;
+}
+main {
+  height: 100%;
+}
+
+main .title {
+  .header-text(@color: black, @font-style: normal);
+}
+
+main .sub-title {
+  .header-text(@color: @color-hover);
+}
+
+.adventures-list {
+  height: 35%;
+}
+
+.adventures-list .adventure-item {
+  background: no-repeat center;
+  background-size: cover;
+  height: 100%;
+  .contrast(80%);
+  .transition();
+}
+
+.adventures-list .adventure-item:hover{
+  .contrast(100%);
+}
+
+.adventures-list .adventure-item .outer {
+  display: block;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+}
+
+.adventures-list .adventure-item .inner {
+  position: relative;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+}
+
+.adventures-list .adventure-item .inner > p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  .header-text(@color: white, @font-style: normal);
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.slide-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  white-space: normal;
+  .header-text(@color: white, @font-style: normal, @letter-spacing: 10px);
+//  text-shadow: 2px 2px 4px #000000;
+}
+
+.slide-title:after{
+  .underline();
+}
+
+.slide-text {
+  font-size: 20px;
+  font-family: initial;
+  white-space: normal;
+  margin: 2% 30%;
+  line-height: 30px;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+.inspiration-list {
+  height: 17%;
+  margin: 0 15%;
+}
+
+.inspiration-list .inspiration-item {
+  height: 100%;
+  display: table;
+}
+
+.inspiration-list .inspiration-item .outer {
+  display: table-cell;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  .transition(@property: background-color);
+}
+
+.inspiration-list .inspiration-item .outer:hover {
+  background-color: lighten(lightgray, 10%);
+}
+
+.inspiration-list .inspiration-item .outer > img,
+.inspiration-list .inspiration-item .outer .inspiration-text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 10px;
+  margin: 0 15px;
+}
+
+.inspiration-list .inspiration-item .outer .inspiration-text .sub-title {
+  font-size: 12px;
+  margin: 0;
+  white-space: normal;
+}
+
+.inspiration-list .inspiration-item .outer .inspiration-text .title {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 5px 0;
+  width: 80%;
+  white-space: normal;
+}
+
+.inspiration-list .inspiration-item .outer .inspiration-text .description {
+  font-size: 10px;
+  color: darkgrey;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 80%;
+  white-space: normal;
+}
+
+
+.footer-menu, .footer-bottom {
+  background-color: darken(darkgray, 55%);
+  padding: 0 15%;
+  display: table;
+  width: 100%;
+}
+
+.footer-menu .footer-col {
+  padding: 70px 15px;
+}
+
+.footer-menu .footer-col p, .footer-menu .footer-col p > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 30px;
+}
+
+.footer-menu .footer-col p > a:hover {
+  color: darken(white, 30%);
+}
+
+.footer-menu .col-50 {
+  padding-left: 215px;
+}
+
+.footer-bottom {
+  background-color: #000000;
+  padding: 20px 15%;
+}
+
+.footer-bottom p, .footer-bottom p > a {
+  padding-right: 15px;
+  color: darken(darkgray, 25%);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.footer-bottom p > a:hover {
+  color: darken(darkgray, 45%);
+}
+
+.footer-bottom p > a:first-child:after {
+  content: "|";
+  margin-left: 15px;
+}
+
+.footer-bottom p > a:hover:first-child:after {
+  color: darken(darkgray, 25%);
+}
+
+
+.form-control, .form-control:focus {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid darken(darkgray, 45%);
+  outline: none;
+  outline-style: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  .input-placeholder-style;
+  padding-left: 10px;
+  width: 100%
+}
+
+.input-placeholder-style {
+  color: darken(orangered, 20%) !important;
+  font-style: italic;
+  font-weight: bold;
+  font-family: initial;
+  font-size: 18px;
+//  padding-left: 10px;
+  padding-bottom: 3px;
+  background-color: transparent;
+//  line-height: 10px;
+}
+
+input::-webkit-input-placeholder {
+  .input-placeholder-style;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  .input-placeholder-style;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  .input-placeholder-style;
+}
+
+input:-ms-input-placeholder {
+  .input-placeholder-style;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:active, input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px darken(darkgray, 55%) inset !important;
+  -webkit-text-fill-color: darken(orangered, 20%) !important;
+}

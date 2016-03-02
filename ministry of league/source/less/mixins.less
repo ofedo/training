@@ -1,0 +1,23 @@
+@import "custom-bootstrap-variables.less";
+
+/* MY MIXINS
+-------------------------------------------------- */
+.underline(@background-color: @base-color, @width: 100px, @height: 2px, @margin: 15px auto) {
+  background-color: @background-color;
+  content: "";
+  display: block;
+  height: @height;
+  width: @width;
+  margin: @margin;
+  // .box-shadow(0px, 0px, 1px, 0px, 1);
+}
+
+.underline-responsive(@background-color: @base-color, @width: 100px, @height: 2px, @margin: 15px auto) {
+  .underline(@background-color, @width, @height, @margin);
+
+  @media (min-width: @screen-lg) {
+    // background-color: green;
+    // how do I change just the default value of @margin (leave as is if parameter is given)
+    margin: 15px 0;
+  }
+}

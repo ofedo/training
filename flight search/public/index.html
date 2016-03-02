@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Flight Search</title>
+
+    <!-- custom Bootstrap core CSS -->
+    <link href="css/custom-bootstrap.css" rel="stylesheet">
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+          <div class="cover-container">
+            <section class="inner">
+              <h1 class="text-uppercase text-center logo">
+                <i class="fa fa-plane"></i><br>
+                fly away<p>somewhere</p>
+              </h1>
+              <form class="form-horizontal text-left">
+                <section class="section">
+                  <div class="form-group">
+                    <label for="flyFrom" class="my-control-label">I want to fly from</label>
+                    <input type="text" class="my-form-control input-resp" id="flyFrom" placeholder="">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="flyTo" class="my-control-label">to</label>
+                    <input type="text" class="my-form-control input-resp" id="flyTo" placeholder="">
+                  </div>
+                </section>
+
+                <section class="section">
+                  <div class="form-group">
+                    <label for="flyWith" class="my-control-label">I will be flying</label>
+                    <select class="select">
+                      <option selected>with others</option>
+                      <option>alone</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="thereWillBe" class="my-control-label">there will be</label>
+                    <input type="text" class="my-form-control " id="numPeople" placeholder="">
+                    <label for="peopleInTotal" class="my-control-label">people in total.</label>
+                  </div>
+              </section>
+
+              <section class="section">
+                <div class="form-group">
+                  <label for="thisIsA" class="my-control-label">This is a</label>
+                  <select class="select">
+                    <option selected>return</option>
+                    <option>forward</option>
+                  </select>
+                  <label for="flight" class="my-control-label">flight</label>
+                </div>
+              </section>
+
+              <section class="section">
+                <div class="form-group">
+                  <label for="myDatesAre" class="my-control-label">My dates are</label>
+                  <select class="select">
+                    <option selected>flexible</option>
+                    <option>fixed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="departureDate" class="my-control-label">Departure date</label>
+                    <input type="date" class="my-form-control date"/>
+                    <!-- <i class="fa fa-calendar"></i> -->
+                </div>
+                <div class="form-group">
+                  <label for="returnDate" class="my-control-label">Return date</label>
+                    <input type="date" class="my-form-control date"/>
+                    <!-- <i class="fa fa-calendar"></i> -->
+                </div>
+              </section>
+              <section class="section">
+                <div class="form-group  text-center">
+                  <button type="submit" class="btn btn-danger text-uppercase">Find flights</button>
+                </div>
+              </section>
+              </form>
+            </section>
+          </div>
+
+        </div>
+
+      </div>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

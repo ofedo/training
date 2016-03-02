@@ -1,0 +1,41 @@
+.blur(@blur: 5px) {
+  filter: blur(@blur);
+  -webkit-filter: blur(@blur);
+	-moz-filter:	blur(@blur);
+  -o-filter: blur(@blur);
+  -ms-filter: blur(@blur);
+}
+
+.contrast(@contrast: 200%) {
+  filter: contrast(@contrast);
+  -webkit-filter: contrast(@contrast);
+	-moz-filter:	contrast(@contrast);
+  -o-filter: contrast(@contrast);
+  -ms-filter: contrast(@contrast);
+}
+
+.blur-contrast(@blur: 5px, @contrast: 200%){
+  filter: blur(@blur) contrast(@contrast);
+  -webkit-filter: blur(@blur) contrast(@contrast);
+  -moz-filter:	blur(@blur) contrast(@contrast);
+  -o-filter: blur(@blur) contrast(@contrast);
+  -ms-filter: blur(@blur) contrast(@contrast);
+}
+
+.box-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-inset(@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+  -webkit-box-shadow:	inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-rgba (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @rgba: rgba(0, 0, 0, 1)) {
+	-webkit-box-shadow:	@x @y @blur @spread @rgba;
+	-moz-box-shadow:	@x @y @blur @spread @rgba;
+	box-shadow:		@x @y @blur @spread @rgba;
+}

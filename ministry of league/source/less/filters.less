@@ -1,0 +1,73 @@
+.flipH {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.flipV {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+
+.rotate(@degrees: 180deg) {
+  -ms-transform: rotate(@degrees); /* IE 9 */
+   -webkit-transform: rotate(@degrees); /* Chrome, Safari, Opera */
+   transform: rotate(@degrees);
+}
+
+.blur(@blur: 5px) {
+  filter: blur(@blur);
+  -webkit-filter: blur(@blur);
+	-moz-filter:	blur(@blur);
+  -o-filter: blur(@blur);
+  -ms-filter: blur(@blur);
+}
+
+.contrast(@contrast: 200%) {
+  filter: contrast(@contrast);
+  -webkit-filter: contrast(@contrast);
+	-moz-filter:	contrast(@contrast);
+  -o-filter: contrast(@contrast);
+  -ms-filter: contrast(@contrast);
+}
+
+.blur-contrast(@blur: 5px, @contrast: 200%){
+  filter: blur(@blur) contrast(@contrast);
+  -webkit-filter: blur(@blur) contrast(@contrast);
+  -moz-filter:	blur(@blur) contrast(@contrast);
+  -o-filter: blur(@blur) contrast(@contrast);
+  -ms-filter: blur(@blur) contrast(@contrast);
+}
+
+.box-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-inset(@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+  -webkit-box-shadow:	inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-rgba (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @rgba: rgba(0, 0, 0, 1)) {
+	-webkit-box-shadow:	@x @y @blur @spread @rgba;
+	-moz-box-shadow:	@x @y @blur @spread @rgba;
+	box-shadow:		@x @y @blur @spread @rgba;
+}
+
+.gradient(@angle: -90deg, @color-stop1: red, @color-stop2: yellow) {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */
+}
